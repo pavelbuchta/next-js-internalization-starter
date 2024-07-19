@@ -51,6 +51,6 @@
 
 @layer utilities {
   .transition-base {
-    @apply ease-out-expo duration-500;
+    @apply duration-300 ease-in-out;
   }
 }
