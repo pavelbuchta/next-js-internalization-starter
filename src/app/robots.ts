@@ -1,4 +1,4 @@
-import { METADATA_BASE } from "@/config";
+import constants from "@/config/constants";
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: METADATA_BASE + "/sitemap.xml",
+    sitemap: constants.baseUrl + "/sitemap.xml",
   };
 }
