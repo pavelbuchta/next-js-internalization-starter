@@ -1,6 +1,7 @@
 import { COMPANY_CATEGORY, COMPANY_NAME, METADATA_BASE } from "@/config";
 import constants from "@/config/constants";
 import { i18n } from "@/i18n/config";
+import clsx from "clsx";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -75,7 +76,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`m-0 bg-background p-0 font-sans text-foreground antialiased ${inter.variable}`}
+        className={clsx(
+          "m-0 bg-background p-0 font-sans text-foreground antialiased",
+          inter.variable
+        )}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
